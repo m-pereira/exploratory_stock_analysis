@@ -1,0 +1,41 @@
+"0","# Create the portfolio specification"
+"0","port_spec <- portfolio.spec(colnames(index_returns))"
+"0","# Add a full investment constraint such that the weights sum to 1"
+"0","port_spec <- add.constraint(portfolio = port_spec, type = ""full_investment"")"
+"0","# Add a long only constraint such that the weight of an asset is between 0 and 1"
+"0","port_spec <- add.constraint(portfolio = port_spec, type = ""long_only"")"
+"0","# Add an objective to minimize portfolio standard deviation"
+"0","port_spec <- add.objective(portfolio = port_spec, type = ""risk"", name = ""StdDev"")"
+"0",""
+"0","# Solve the optimization problem"
+"0","opt <- optimize.portfolio(index_returns, portfolio = port_spec, optimize_method = ""ROI"")"
+"2","Warning: index does not have a ‘tclass’ attribute"
+"2","Warning: index does not have a ‘tclass’ attribute"
+"2","Warning in tclass.xts(x) :"
+"2"," index does not have a ‘tclass’ attribute
+"
+"2","Warning in tclass.xts(x) :"
+"2"," index does not have a ‘tclass’ attribute
+"
+"2","Warning in tclass.xts(object) :"
+"2","
+ "
+"2"," index does not have a ‘tclass’ attribute
+"
+"2","Warning in tzone.xts(object) :"
+"2"," index does not have a ‘tzone’ attribute
+"
+"2","Warning in tclass.xts(x) :"
+"2"," index does not have a ‘tclass’ attribute
+"
+"2","Warning in tclass.xts(x) :"
+"2"," index does not have a ‘tclass’ attribute
+"
+"2","Warning in tclass.xts(object) :"
+"2","
+ "
+"2"," index does not have a ‘tclass’ attribute
+"
+"2","Warning in tzone.xts(object) :"
+"2"," index does not have a ‘tzone’ attribute
+"
